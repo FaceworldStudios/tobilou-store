@@ -12,7 +12,7 @@ const PRODUCTS = [
     price: 120,
     category: 'apparel',
     soldOut: false,
-    images: ['images/gen_014500_2.webp', 'images/gen_014500_3.webp'],
+    images: ['images/gen_014500_3.webp', 'images/gen_014500_2.webp'],
     url: 'https://tobilou.com'
   },
   {
@@ -22,7 +22,7 @@ const PRODUCTS = [
     price: 55,
     category: 'apparel',
     soldOut: false,
-    images: ['images/gen_025236_2.webp', 'images/gen_025236_3.webp'],
+    images: ['images/gen_025236_3.webp', 'images/gen_025236_2.webp'],
     url: 'https://tobilou.com'
   },
   {
@@ -32,7 +32,7 @@ const PRODUCTS = [
     price: 65,
     category: 'apparel',
     soldOut: false,
-    images: ['images/gen_024814_2.webp', 'images/gen_024814_3.webp'],
+    images: ['images/gen_024814_3.webp', 'images/gen_024814_2.webp'],
     url: 'https://tobilou.com'
   },
   {
@@ -52,7 +52,7 @@ const PRODUCTS = [
     price: 45,
     category: 'accessories',
     soldOut: false,
-    images: ['images/gen_batch2_1.webp', 'images/gen_batch2_3.webp', 'images/gen_batch3_1.webp', 'images/gen_batch3_3.webp'],
+    images: ['images/gen_batch3_3.webp', 'images/gen_batch2_1.webp', 'images/gen_batch2_3.webp', 'images/gen_batch3_1.webp'],
     url: 'https://tobilou.com'
   },
   {
@@ -309,11 +309,12 @@ function renderProducts(filter = 'all') {
       <span class="product-name">${product.code}</span>
     `;
 
+    const img = card.querySelector('.product-image');
+
     // Hover image cycling for products with multiple images
     if (product.images.length > 1) {
       let hoverInterval = null;
       let hoverIndex = 0;
-      const img = card.querySelector('.product-image');
 
       card.addEventListener('mouseenter', () => {
         hoverIndex = 0;
@@ -476,8 +477,9 @@ function openDetail(product) {
 
   document.querySelector('.detail-name').textContent = product.code;
   document.querySelector('.detail-price').textContent = `$${product.price}`;
-  document.querySelector('.detail-image').src = product.images[0];
-  document.querySelector('.detail-image').alt = product.name;
+  const detailImg = document.querySelector('.detail-image');
+  detailImg.src = product.images[0];
+  detailImg.alt = product.name;
 
   // Show/hide add button vs sold out
   const addBtn = document.querySelector('.detail-add');
