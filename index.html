@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tobi lou</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <button class="menu-toggle" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </button>
+    <nav class="main-nav">
+      <a href="#" class="nav-link active" data-filter="all">NEW</a>
+      <a href="#" class="nav-link" data-filter="apparel">APPAREL</a>
+      <a href="#" class="nav-link" data-filter="plushies">PLUSHIES</a>
+      <a href="#" class="nav-link" data-filter="vinyl">VINYL</a>
+      <a href="#" class="nav-link" data-filter="accessories">ACCESSORIES</a>
+    </nav>
+    <button class="cart-toggle" aria-label="Cart">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M5 5h10l-1.5 7H6.5L5 5z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+        <circle cx="7.5" cy="15.5" r="1" fill="currentColor"/>
+        <circle cx="12.5" cy="15.5" r="1" fill="currentColor"/>
+      </svg>
+      <span class="cart-count" style="display:none;">0</span>
+    </button>
+  </header>
+
+  <!-- SIDE MENU -->
+  <div class="side-menu">
+    <div class="side-menu-overlay"></div>
+    <div class="side-menu-panel">
+      <button class="side-menu-close" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <line x1="5" y1="5" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="15" y1="5" x2="5" y2="15" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+      <nav class="side-nav">
+        <a href="https://tobilou.com" target="_blank">SHOP</a>
+        <a href="https://tobilou.com/pages/contact" target="_blank">CONTACT</a>
+        <a href="https://tobilou.com/account/login" target="_blank">ACCOUNT</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer">
+    <div class="cart-drawer-overlay"></div>
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <span>CART</span>
+        <button class="cart-drawer-close" aria-label="Close cart">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <line x1="5" y1="5" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="15" y1="5" x2="5" y2="15" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>TOTAL</span>
+          <span class="cart-total-price">$0</span>
+        </div>
+        <a href="https://tobilou.com/cart" target="_blank" class="checkout-btn">CHECKOUT</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <main class="product-grid" id="productGrid">
+    <!-- Products injected by JS -->
+  </main>
+
+  <!-- PRODUCT DETAIL OVERLAY -->
+  <div class="product-detail" id="productDetail">
+    <header class="detail-header">
+      <button class="detail-back" aria-label="Back">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+      <button class="cart-toggle detail-cart" aria-label="Cart">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M5 5h10l-1.5 7H6.5L5 5z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <circle cx="7.5" cy="15.5" r="1" fill="currentColor"/>
+          <circle cx="12.5" cy="15.5" r="1" fill="currentColor"/>
+        </svg>
+      </button>
+    </header>
+    <div class="detail-content">
+      <div class="detail-image-container">
+        <button class="detail-arrow detail-prev" aria-label="Previous image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <img class="detail-image" src="" alt="">
+        <button class="detail-arrow detail-next" aria-label="Next image">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </div>
+      <div class="detail-dots"></div>
+      <h2 class="detail-name"></h2>
+      <p class="detail-price"></p>
+      <button class="detail-add">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+      <p class="detail-sold-out" style="display:none;">SOLD OUT</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="https://tobilou.com/pages/contact" target="_blank">Contact</a>
+      <a href="https://tobilou.com/policies/terms-of-service" target="_blank">Terms</a>
+      <a href="https://tobilou.com/policies/privacy-policy" target="_blank">Privacy</a>
+    </div>
+    <div class="footer-subscribe">
+      <span>Receive website updates</span>
+      <form class="subscribe-form" action="https://tobilou.com" method="get">
+        <input type="email" placeholder="Email Address" class="subscribe-input">
+        <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+      </form>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
