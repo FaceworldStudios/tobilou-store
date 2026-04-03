@@ -6,6 +6,56 @@
 // ---- PRODUCT DATA (from tobilou.com Shopify store) ----
 const PRODUCTS = [
   {
+    id: 'farada-vest',
+    name: 'FARADA Vest',
+    code: 'FV-01',
+    price: 120,
+    category: 'apparel',
+    soldOut: false,
+    images: ['images/gen_014500_2.webp', 'images/gen_014500_3.webp'],
+    url: 'https://tobilou.com'
+  },
+  {
+    id: 'farada-tee',
+    name: 'FARADA Heart Tee',
+    code: 'FT-01',
+    price: 55,
+    category: 'apparel',
+    soldOut: false,
+    images: ['images/gen_025236_2.webp', 'images/gen_025236_3.webp'],
+    url: 'https://tobilou.com'
+  },
+  {
+    id: 'farada-shorts',
+    name: 'FARADA Shorts',
+    code: 'FS-01',
+    price: 65,
+    category: 'apparel',
+    soldOut: false,
+    images: ['images/gen_024814_2.webp', 'images/gen_024814_3.webp'],
+    url: 'https://tobilou.com'
+  },
+  {
+    id: 'farada-headband',
+    name: 'FARADA Headband',
+    code: 'FH-01',
+    price: 25,
+    category: 'accessories',
+    soldOut: false,
+    images: ['images/gen_batch1_2.webp', 'images/gen_batch1_3.webp'],
+    url: 'https://tobilou.com'
+  },
+  {
+    id: 'farada-hat',
+    name: 'FARADA Hat',
+    code: 'FH-02',
+    price: 45,
+    category: 'accessories',
+    soldOut: false,
+    images: ['images/gen_batch2_1.webp', 'images/gen_batch2_3.webp', 'images/gen_batch3_1.webp', 'images/gen_batch3_3.webp'],
+    url: 'https://tobilou.com'
+  },
+  {
     id: 'farada-shoe',
     name: 'FARADA x "Breathing Room" Shoe',
     code: 'FR-01',
@@ -258,6 +308,28 @@ function renderProducts(filter = 'all') {
       </div>
       <span class="product-name">${product.code}</span>
     `;
+
+    // Hover image cycling for products with multiple images
+    if (product.images.length > 1) {
+      let hoverInterval = null;
+      let hoverIndex = 0;
+      const img = card.querySelector('.product-image');
+
+      card.addEventListener('mouseenter', () => {
+        hoverIndex = 0;
+        hoverInterval = setInterval(() => {
+          hoverIndex = (hoverIndex + 1) % product.images.length;
+          img.src = product.images[hoverIndex];
+        }, 250);
+      });
+
+      card.addEventListener('mouseleave', () => {
+        clearInterval(hoverInterval);
+        hoverInterval = null;
+        hoverIndex = 0;
+        img.src = product.images[0];
+      });
+    }
 
     card.addEventListener('click', () => openDetail(product));
     grid.appendChild(card);
