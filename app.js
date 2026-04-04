@@ -42,7 +42,7 @@ const PRODUCTS = [
     price: 25,
     category: 'accessories',
     soldOut: false,
-    images: ['images/gen_batch1_2.webp', 'images/gen_batch1_3.webp'],
+    images: ['images/gen_batch1_2.webp'],
     url: 'https://tobilou.com'
   },
   {
@@ -52,219 +52,89 @@ const PRODUCTS = [
     price: 45,
     category: 'accessories',
     soldOut: false,
-    images: ['images/gen_batch3_3.webp', 'images/gen_batch2_1.webp', 'images/gen_batch2_3.webp', 'images/gen_batch3_1.webp'],
+    images: ['images/gen_batch2_1.webp', 'images/gen_batch3_1.webp'],
     url: 'https://tobilou.com'
   },
   {
-    id: 'farada-shoe',
-    name: 'FARADA x "Breathing Room" Shoe',
-    code: 'FR-01',
-    price: 175,
-    category: 'shoes',
+    id: 'farada-hoodie',
+    name: 'FARADA Brain Hoodie',
+    code: 'FH-03',
+    price: 95,
+    category: 'apparel',
     soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/Screenshot2025-06-26at3.14.37PM.png?v=1750977989&width=800'],
-    url: 'https://tobilou.com/products/breathing-room-3-shoe-merch'
+    images: ['images/IMG_5650_windbreaker_clean.webp', 'images/IMG_5652_hoodie_clean.webp'],
+    url: 'https://tobilou.com'
   },
   {
-    id: 'buff-baby-blue',
-    name: 'Buff Baby Plushie (Blue)',
-    code: 'BB-01',
-    price: 30,
-    category: 'plushies',
+    id: 'farada-joggers',
+    name: 'FARADA Joggers',
+    code: 'FJ-01',
+    price: 85,
+    category: 'apparel',
     soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/IMG_0425.jpg?v=1731027141&width=800'],
-    url: 'https://tobilou.com/products/buff-baby-plushie-blue'
+    images: ['images/IMG_5654_joggers_clean.webp', 'images/IMG_5654_joggers.webp'],
+    url: 'https://tobilou.com'
   },
   {
-    id: 'buff-baby-pink',
-    name: 'Buff Baby Plushie (Pink)',
-    code: 'BB-02',
-    price: 20,
-    category: 'plushies',
-    soldOut: true,
-    images: ['https://tobilou.com/cdn/shop/files/IMG_0445.jpg?v=1731026648&width=800'],
-    url: 'https://tobilou.com/products/buff-baby-plush'
-  },
-  {
-    id: 'buff-baby-keychain',
-    name: 'Buff Baby Keychain (Pink)',
-    code: 'KC-01',
-    price: 16,
-    category: 'accessories',
-    soldOut: true,
-    images: ['https://tobilou.com/cdn/shop/files/IMG_0416.jpg?v=1731028226&width=800'],
-    url: 'https://tobilou.com/products/buff-baby-keychain-pink'
-  },
-  {
-    id: 'buff-baby-backpack',
-    name: 'Buff Baby Backpack (Pink)',
-    code: 'BK-01',
-    price: 65,
-    category: 'accessories',
+    id: 'farada-life-tee',
+    name: 'FARADA "New Ways" Tee',
+    code: 'FT-02',
+    price: 55,
+    category: 'apparel',
     soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/IMG_0419.jpg?v=1731024689&width=800'],
-    url: 'https://tobilou.com/products/buff-baby-backpack-pink'
+    images: ['images/IMG_5655_tee_front_clean.webp', 'images/IMG_5656_tee_back_clean.webp'],
+    url: 'https://tobilou.com'
   },
   {
-    id: 'live-on-ice-vinyl',
-    name: 'Live On Ice Vinyl',
-    code: 'VN-01',
+    id: 'farada-tank',
+    name: 'FARADA Tank Top',
+    code: 'FK-01',
+    price: 45,
+    category: 'apparel',
+    soldOut: false,
+    images: ['images/IMG_5658_tank_front_clean.webp', 'images/IMG_5658_tank_front.webp'],
+    url: 'https://tobilou.com'
+  },
+  {
+    id: 'farada-crop-tank',
+    name: 'FARADA Crop Tank',
+    code: 'FK-02',
+    price: 40,
+    category: 'apparel',
+    soldOut: false,
+    images: ['images/IMG_5660_crop_tank_clean.webp', 'images/IMG_5660_crop_tank_front.webp'],
+    url: 'https://tobilou.com'
+  },
+  {
+    id: 'farada-mesh-shorts',
+    name: 'FARADA Mesh Shorts',
+    code: 'FS-02',
+    price: 60,
+    category: 'apparel',
+    soldOut: false,
+    images: ['images/IMG_5661_shorts_front_clean.webp', 'images/IMG_5661_shorts_front.webp'],
+    url: 'https://tobilou.com'
+  },
+  {
+    id: 'farada-side-tee',
+    name: 'FARADA Side Logo Tee',
+    code: 'FT-03',
     price: 50,
-    category: 'vinyl',
-    soldOut: true,
-    images: ['https://tobilou.com/cdn/shop/files/s-l1600-1_2e795b29-2128-4d98-9807-d4ff1c9eff90.jpg?v=1722561527&width=800'],
-    url: 'https://tobilou.com/products/live-on-ice-vinyl'
-  },
-  {
-    id: 'plushie-vinyl',
-    name: 'Plushie Vinyl',
-    code: 'VN-02',
-    price: 30,
-    category: 'vinyl',
-    soldOut: true,
-    images: ['https://tobilou.com/cdn/shop/files/VINYLMOCKUP.png?v=1711514774&width=800'],
-    url: 'https://tobilou.com/products/vinyl'
-  },
-  {
-    id: 'baggy-weather-vinyl',
-    name: 'Baggy Weather Vinyl',
-    code: 'VN-03',
-    price: 35,
-    category: 'vinyl',
-    soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/BW-LP-MOCK-WHITE.jpg?v=1713225295&width=800'],
-    url: 'https://tobilou.com/products/baggy-weather-vinyl'
-  },
-  {
-    id: 'plushie-tee',
-    name: 'Plushie Tee',
-    code: 'TS-01',
-    price: 30,
     category: 'apparel',
     soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/Plushieteeback_ecomm.jpg?v=1712802839&width=800'],
-    url: 'https://tobilou.com/products/plushie-tee'
+    images: ['images/IMG_5664_tee_side.webp'],
+    url: 'https://tobilou.com'
   },
   {
-    id: 't-pain-tee',
-    name: 'T-Pain Tour Tee',
-    code: 'TS-02',
-    price: 30,
+    id: 'farada-longsleeve',
+    name: 'FARADA Long Sleeve',
+    code: 'FL-01',
+    price: 65,
     category: 'apparel',
     soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/Tpainfront_ecomm.jpg?v=1712817873&width=800'],
-    url: 'https://tobilou.com/products/t-pain-tour-tee'
+    images: ['images/IMG_5665_longsleeve_clean.webp', 'images/IMG_5665_longsleeve.webp'],
+    url: 'https://tobilou.com'
   },
-  {
-    id: 'fall-tour-tee',
-    name: 'Fall Tour Tee',
-    code: 'TS-03',
-    price: 20,
-    category: 'apparel',
-    soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/tourdetee_ecomm.jpg?v=1712803969&width=800'],
-    url: 'https://tobilou.com/products/tour-de-tobi-lou-tee'
-  },
-  {
-    id: 'scuba-sylvie-tee',
-    name: 'Scuba Sylvie Long Sleeve Tee',
-    code: 'LS-01',
-    price: 20,
-    category: 'apparel',
-    soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/sylieteefront_ecomm.jpg?v=1712803174&width=800'],
-    url: 'https://tobilou.com/products/scuba-sylvie-long-sleeve-tee'
-  },
-  {
-    id: 'tyger-tee',
-    name: 'Tyger Tie-Dye Tour Tee',
-    code: 'TS-04',
-    price: 15,
-    category: 'apparel',
-    soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/tygerteefront_ecomm.jpg?v=1712803579&width=800'],
-    url: 'https://tobilou.com/products/perish-blu-tyger-tee'
-  },
-  {
-    id: 'grey-hoodie',
-    name: 'Happy+Extra Sad Grey Hoodie',
-    code: 'HD-01',
-    price: 35,
-    category: 'apparel',
-    soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/hoodie_ecomm_gray.jpg?v=1712801625&width=800'],
-    url: 'https://tobilou.com/products/happy-extra-sad-perish-blue-tour-hoodie'
-  },
-  {
-    id: 'green-hoodie',
-    name: 'Happy+Extra Sad Green Hoodie',
-    code: 'HD-02',
-    price: 35,
-    category: 'apparel',
-    soldOut: true,
-    images: ['https://tobilou.com/cdn/shop/files/hoodiegreen_ecomm.jpg?v=1712805145&width=800'],
-    url: 'https://tobilou.com/products/happy-extra-sad-green-hoodie'
-  },
-  {
-    id: 'white-hoodie',
-    name: 'Goodnightmeesh Hoodie',
-    code: 'HD-03',
-    price: 35,
-    category: 'apparel',
-    soldOut: true,
-    images: ['https://tobilou.com/cdn/shop/files/whitehoodiefront_ecomm.jpg?v=1712805281&width=800'],
-    url: 'https://tobilou.com/products/happy-extra-sad-tour-white-hoodie'
-  },
-  {
-    id: 'blue-hoodie',
-    name: '"Sad Last Night" Hoodie',
-    code: 'HD-04',
-    price: 35,
-    category: 'apparel',
-    soldOut: true,
-    images: ['https://tobilou.com/cdn/shop/files/bluehoodiefront_ecomm.jpg?v=1712805614&width=800'],
-    url: 'https://tobilou.com/products/i-was-sad-last-night-im-ok-now-blue-hoodie'
-  },
-  {
-    id: 'bmx-jersey',
-    name: 'Perish Blue BMX Jersey',
-    code: 'JR-01',
-    price: 30,
-    category: 'apparel',
-    soldOut: true,
-    images: ['https://tobilou.com/cdn/shop/files/Jerseyfront_ecomm.jpg?v=1712801917&width=800'],
-    url: 'https://tobilou.com/products/perish-blue-racing-jersey'
-  },
-  {
-    id: 'bmx-pants',
-    name: 'Perish Blue BMX Pants',
-    code: 'PT-01',
-    price: 30,
-    category: 'apparel',
-    soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/racingpantsfront_ecomm.jpg?v=1712802340&width=800'],
-    url: 'https://tobilou.com/products/perish-blue-racing-pants'
-  },
-  {
-    id: 'baggy-tote',
-    name: 'Baggy Weather Tote',
-    code: 'BG-01',
-    price: 5,
-    category: 'accessories',
-    soldOut: false,
-    images: ['https://tobilou.com/cdn/shop/files/bag_ecommcopy.jpg?v=1712815805&width=800'],
-    url: 'https://tobilou.com/products/baggy-weather-tote'
-  },
-  {
-    id: 'trucker-hat',
-    name: 'Little Lou Trucker Hat',
-    code: 'HT-01',
-    price: 10,
-    category: 'accessories',
-    soldOut: true,
-    images: ['https://tobilou.com/cdn/shop/files/truckhat_ecomm.jpg?v=1712804260&width=800'],
-    url: 'https://tobilou.com/products/trucker-hat'
-  }
 ];
 
 // ---- STATE ----
